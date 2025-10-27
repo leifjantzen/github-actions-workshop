@@ -1,10 +1,3 @@
-
-
-
-🧨 I'm a bug!!! Please remove me!!! 🧨
-
-
-
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -121,7 +114,7 @@ async function processMarkdownFiles() {
 
   if (!fs.existsSync(tasksDir)) {
     console.warn(
-      "Warning: tasks directory not found, skipping markdown processing"
+      "Warning: tasks directory not found, skipping markdown processing",
     );
     return [];
   }
@@ -276,7 +269,7 @@ function copyGitHubMarkdownCSS() {
     projectRoot,
     "node_modules",
     "github-markdown-css",
-    "github-markdown-light.css"
+    "github-markdown-light.css",
   );
   const cssDestPath = path.join(distDir, "css", "github-markdown.css");
 
