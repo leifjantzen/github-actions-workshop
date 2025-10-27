@@ -27,11 +27,11 @@ jobs:
           path: dist/ 
       - run: npm run test
       - name: upload coverage
-        uses: actions/upload-artifact@v4
         if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: coverage-report
-          path: coverage-current.txt
+          path: coverage/
           retention-days: 30
 
   report:
@@ -47,7 +47,7 @@ jobs:
         uses: actions/download-artifact@v4
         with: 
           name: coverage-report
-          path: coverage-current.txt
+          path: coverage/
       - run: ls -la 
       - run: echo "Build and test artifacts successfully collected" 
 
