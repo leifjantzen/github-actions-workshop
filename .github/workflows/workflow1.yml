@@ -1,0 +1,19 @@
+name: hello-workflow
+on: 
+  - push
+
+jobs: 
+  say-hello: 
+    name: Say Hello 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting 
+        run: echo "Hello from GHA"
+
+      - name: Print date and time 
+        run: date 
+
+      - name: Print system info  
+        run: |
+            echo "Running on" 
+            uname -a
